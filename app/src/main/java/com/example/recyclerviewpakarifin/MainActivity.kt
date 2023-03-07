@@ -2,6 +2,7 @@ package com.example.recyclerviewpakarifin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         var data=ArrayList<item>()
         data.addAll(item_data().listData)
         adapter=adapter(data)
-        recyclerView.layoutManager=LinearLayoutManager(this)
+        recyclerView.layoutManager= GridLayoutManager(this,2)
         recyclerView.adapter=adapter
     }
 }
